@@ -3,6 +3,7 @@ using System.IO;
 using YamlDotNet.Core;
 using YamlDotNet.Core.Events;
 using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NodeDeserializers;
 
 namespace DeviceDetectorNET.Yaml
 {
@@ -27,7 +28,11 @@ namespace DeviceDetectorNET.Yaml
 
         private T ParseStreamReader(StreamReader streamReader)
         {
-            var deserializer = new DeserializerBuilder().Build();
+            var deserializer = new DeserializerBuilder()
+                .WithNodeDeserializer(inner => new YamlNodeDeserializer(inner),
+                    s => s.InsteadOf<ObjectNodeDeserializer>())
+                .Build();
+            
             var parser = new YamlDotNet.Core.Parser(streamReader);
 
             // Consume the stream start event "manually"

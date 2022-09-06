@@ -569,7 +569,7 @@
 -
   user_agent: XBMC/PRE-11.0 Git:20110623-62171b3 (iOS; 11.0.0 AppleTV2,1; http://www.xbmc.org)
   os:
-    name: Apple TV
+    name: tvOS
     short_name: ATV
     version:
     platform:
@@ -1794,14 +1794,14 @@
 -
   user_agent: Mozilla/5.0 (X11; Linux armv8l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Safari/537.36 HbbTV/1.5.1 ( DRM; MTC; 4K_Android_TV_V01; 1.001; MS68860-ZC01-01; Reference_2K19;) FVC/4.0 (MTC; Reference_2K19;)
   os:
-    name: Android
+    name: Android TV
     short_name: AND
     version: ""
     platform: ARM
 -
   user_agent: Mozilla/5.0 (X11; Linux armv8l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Safari/537.36 HbbTV/1.5.1 (+DRM; UMC-Sharp; FVP6683;1.0.0.0;1.0.0.0; UMC_2KAndroidTV_2019;UMC_SHARP;) FVC/4.0 (UMC-Sharp; UMC_2KAndroidTV_2019;)
   os:
-    name: Android
+    name: Android TV
     short_name: AND
     version: ""
     platform: ARM

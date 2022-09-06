@@ -187,6 +187,17 @@ namespace DeviceDetectorNET.Parser
                 var matches = MatchUserAgent(os.Regex);
                 if (matches.Length > 0)
                 {
+                    if (os.Versions.Any())
+                    {
+                        foreach (var version in os.Versions)
+                        {
+                            if (IsMatchUserAgent(version.Regex))
+                            {
+                                os.Version = version.Version;
+                                break;
+                            }
+                        }
+                    }
                     localOs = os;
                     localMatches = matches;
                     break;
