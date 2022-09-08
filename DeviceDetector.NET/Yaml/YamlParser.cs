@@ -29,8 +29,8 @@ namespace DeviceDetectorNET.Yaml
         private T ParseStreamReader(StreamReader streamReader)
         {
             var deserializer = new DeserializerBuilder()
-                .WithNodeDeserializer(inner => new YamlNodeDeserializer(inner),
-                    s => s.InsteadOf<ObjectNodeDeserializer>())
+                //.WithNodeDeserializer(inner => new YamlNodeDeserializer(inner), // to use a custom deserializer
+                //    s => s.InsteadOf<ObjectNodeDeserializer>())
                 .Build();
             
             var parser = new YamlDotNet.Core.Parser(streamReader);

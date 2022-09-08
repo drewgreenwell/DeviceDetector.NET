@@ -16,13 +16,6 @@ namespace DeviceDetectorNET.Class
 
     }
 
-    public class Os2 : Os
-    {
-        [YamlMember(Alias = "versions")]
-        public List<OsVersion> Versions { get; set; }
-
-    }
-
     public class OsVersion : IParseLibrary
     {
         [YamlMember(Alias = "name")]
